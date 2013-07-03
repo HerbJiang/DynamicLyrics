@@ -273,9 +273,17 @@
 									<reference key="NSOnImage" ref="817365088"/>
 									<reference key="NSMixedImage" ref="112771844"/>
 								</object>
-								<object class="NSMenuItem" id="780896867">
+								<object class="NSMenuItem" id="549455928">
 									<reference key="NSMenu" ref="500224075"/>
-									<string key="NSTitle">自动转换歌词为Big5</string>
+									<string key="NSTitle">自动把歌词转换为Big5</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="817365088"/>
+									<reference key="NSMixedImage" ref="112771844"/>
+								</object>
+								<object class="NSMenuItem" id="324411803">
+									<reference key="NSMenu" ref="500224075"/>
+									<string key="NSTitle">导入LRC歌词...</string>
 									<string key="NSKeyEquiv"/>
 									<int key="NSMnemonicLoc">2147483647</int>
 									<reference key="NSOnImage" ref="817365088"/>
@@ -621,11 +629,19 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">ExportLRC:</string>
+						<string key="label">exportLRC:</string>
 						<reference key="source" ref="57075725"/>
 						<reference key="destination" ref="796675328"/>
 					</object>
-					<int key="connectionID">855</int>
+					<int key="connectionID">856</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">importLyric:</string>
+						<reference key="source" ref="57075725"/>
+						<reference key="destination" ref="324411803"/>
+					</object>
+					<int key="connectionID">858</int>
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
@@ -678,10 +694,10 @@
 				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: values.PrefEnableAutoConvertLyricsToBig5</string>
-						<reference key="source" ref="780896867"/>
+						<reference key="source" ref="549455928"/>
 						<reference key="destination" ref="668106822"/>
 						<object class="NSNibBindingConnector" key="connector">
-							<reference key="NSSource" ref="780896867"/>
+							<reference key="NSSource" ref="549455928"/>
 							<reference key="NSDestination" ref="668106822"/>
 							<string key="NSLabel">value: values.PrefEnableAutoConvertLyricsToBig5</string>
 							<string key="NSBinding">value</string>
@@ -693,7 +709,7 @@
 							<int key="NSNibBindingConnectorVersion">2</int>
 						</object>
 					</object>
-					<int key="connectionID">861</int>
+					<int key="connectionID">862</int>
 				</object>
 			</object>
 			<object class="IBMutableOrderedSet" key="objectRecords">
@@ -775,7 +791,8 @@
 							<reference ref="718917190"/>
 							<reference ref="816981477"/>
 							<reference ref="900024044"/>
-							<reference ref="780896867"/>
+							<reference ref="324411803"/>
+							<reference ref="549455928"/>
 						</object>
 						<reference key="parent" ref="245212594"/>
 					</object>
@@ -1019,8 +1036,13 @@
 						<reference key="parent" ref="500224075"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">856</int>
-						<reference key="object" ref="780896867"/>
+						<int key="objectID">857</int>
+						<reference key="object" ref="324411803"/>
+						<reference key="parent" ref="500224075"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">859</int>
+						<reference key="object" ref="549455928"/>
 						<reference key="parent" ref="500224075"/>
 					</object>
 				</object>
@@ -1078,10 +1100,12 @@
 					<string>850.IBPluginDependency</string>
 					<string>852.IBPluginDependency</string>
 					<string>853.IBPluginDependency</string>
-					<string>856.IBPluginDependency</string>
+					<string>857.IBPluginDependency</string>
+					<string>859.IBPluginDependency</string>
 				</object>
 				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1146,7 +1170,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">861</int>
+			<int key="maxID">862</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1163,14 +1187,14 @@
 							<string>CopyTotalTextLyrics:</string>
 							<string>DisabledDesktopLyrics:</string>
 							<string>DisabledMenuBarLyrics:</string>
-							<string>EnableAutoConvertLyricsToBig5:</string>
-							<string>ExportLRC:</string>
 							<string>OpenAlbumfillerWindow:</string>
 							<string>OpenLyricsSearchWindow:</string>
 							<string>WriteArtwork:</string>
 							<string>WriteLyricsToiTunes:</string>
 							<string>aboutDynamicLyrics:</string>
 							<string>adjustLyricsDelay:</string>
+							<string>exportLRC:</string>
+							<string>importLyric:</string>
 							<string>resetLyricsDelay:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
@@ -1200,14 +1224,14 @@
 							<string>CopyTotalTextLyrics:</string>
 							<string>DisabledDesktopLyrics:</string>
 							<string>DisabledMenuBarLyrics:</string>
-							<string>EnableAutoConvertLyricsToBig5:</string>
-							<string>ExportLRC:</string>
 							<string>OpenAlbumfillerWindow:</string>
 							<string>OpenLyricsSearchWindow:</string>
 							<string>WriteArtwork:</string>
 							<string>WriteLyricsToiTunes:</string>
 							<string>aboutDynamicLyrics:</string>
 							<string>adjustLyricsDelay:</string>
+							<string>exportLRC:</string>
+							<string>importLyric:</string>
 							<string>resetLyricsDelay:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
@@ -1233,14 +1257,6 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
-								<string key="name">EnableAutoConvertLyricsToBig5:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
-								<string key="name">ExportLRC:</string>
-								<string key="candidateClassName">id</string>
-							</object>
-							<object class="IBActionInfo">
 								<string key="name">OpenAlbumfillerWindow:</string>
 								<string key="candidateClassName">id</string>
 							</object>
@@ -1262,6 +1278,14 @@
 							</object>
 							<object class="IBActionInfo">
 								<string key="name">adjustLyricsDelay:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">exportLRC:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">importLyric:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">

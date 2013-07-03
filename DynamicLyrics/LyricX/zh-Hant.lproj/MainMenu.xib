@@ -281,6 +281,14 @@
 									<reference key="NSOnImage" ref="11832833"/>
 									<reference key="NSMixedImage" ref="498383531"/>
 								</object>
+								<object class="NSMenuItem" id="892867905">
+									<reference key="NSMenu" ref="500224075"/>
+									<string key="NSTitle">匯入LRC...</string>
+									<string key="NSKeyEquiv"/>
+									<int key="NSMnemonicLoc">2147483647</int>
+									<reference key="NSOnImage" ref="11832833"/>
+									<reference key="NSMixedImage" ref="498383531"/>
+								</object>
 								<object class="NSMenuItem" id="796675328">
 									<reference key="NSMenu" ref="500224075"/>
 									<string key="NSTitle">匯出LRC...</string>
@@ -453,14 +461,6 @@
 				</object>
 				<object class="IBConnectionRecord">
 					<object class="IBActionConnection" key="connection">
-						<string key="label">ExportLRC:</string>
-						<reference key="source" ref="57075725"/>
-						<reference key="destination" ref="796675328"/>
-					</object>
-					<int key="connectionID">772</int>
-				</object>
-				<object class="IBConnectionRecord">
-					<object class="IBActionConnection" key="connection">
 						<string key="label">OpenLyricsSearchWindow:</string>
 						<reference key="source" ref="57075725"/>
 						<reference key="destination" ref="406312067"/>
@@ -628,6 +628,22 @@
 					<int key="connectionID">855</int>
 				</object>
 				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">importLyric:</string>
+						<reference key="source" ref="57075725"/>
+						<reference key="destination" ref="892867905"/>
+					</object>
+					<int key="connectionID">870</int>
+				</object>
+				<object class="IBConnectionRecord">
+					<object class="IBActionConnection" key="connection">
+						<string key="label">exportLRC:</string>
+						<reference key="source" ref="57075725"/>
+						<reference key="destination" ref="796675328"/>
+					</object>
+					<int key="connectionID">871</int>
+				</object>
+				<object class="IBConnectionRecord">
 					<object class="IBBindingConnection" key="connection">
 						<string key="label">value: values.PrefEnableMenuBarLyrics</string>
 						<reference key="source" ref="505948474"/>
@@ -776,6 +792,7 @@
 							<reference ref="740930105"/>
 							<reference ref="705192621"/>
 							<reference ref="193412395"/>
+							<reference ref="892867905"/>
 						</object>
 						<reference key="parent" ref="245212594"/>
 					</object>
@@ -1023,6 +1040,11 @@
 						<reference key="object" ref="193412395"/>
 						<reference key="parent" ref="500224075"/>
 					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">868</int>
+						<reference key="object" ref="892867905"/>
+						<reference key="parent" ref="500224075"/>
+					</object>
 				</object>
 			</object>
 			<object class="NSMutableDictionary" key="flattenedProperties">
@@ -1079,9 +1101,11 @@
 					<string>854.IBPluginDependency</string>
 					<string>856.IBPluginDependency</string>
 					<string>857.IBPluginDependency</string>
+					<string>868.IBPluginDependency</string>
 				</object>
 				<object class="NSArray" key="dict.values">
 					<bool key="EncodedWithXMLCoder">YES</bool>
+					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
 					<string>com.apple.InterfaceBuilder.CocoaPlugin</string>
@@ -1146,7 +1170,7 @@
 				<reference key="dict.values" ref="0"/>
 			</object>
 			<nil key="sourceID"/>
-			<int key="maxID">867</int>
+			<int key="maxID">871</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<object class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -1171,12 +1195,16 @@
 							<string>WriteLyricsToiTunes:</string>
 							<string>aboutDynamicLyrics:</string>
 							<string>adjustLyricsDelay:</string>
+							<string>exportLRC:</string>
 							<string>hideLyric:</string>
+							<string>importLyric:</string>
 							<string>resetLyricsDelay:</string>
 							<string>showPrefsWindow:</string>
 						</object>
 						<object class="NSArray" key="dict.values">
 							<bool key="EncodedWithXMLCoder">YES</bool>
+							<string>id</string>
+							<string>id</string>
 							<string>id</string>
 							<string>id</string>
 							<string>id</string>
@@ -1212,7 +1240,9 @@
 							<string>WriteLyricsToiTunes:</string>
 							<string>aboutDynamicLyrics:</string>
 							<string>adjustLyricsDelay:</string>
+							<string>exportLRC:</string>
 							<string>hideLyric:</string>
+							<string>importLyric:</string>
 							<string>resetLyricsDelay:</string>
 							<string>showPrefsWindow:</string>
 						</object>
@@ -1271,7 +1301,15 @@
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
+								<string key="name">exportLRC:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
 								<string key="name">hideLyric:</string>
+								<string key="candidateClassName">id</string>
+							</object>
+							<object class="IBActionInfo">
+								<string key="name">importLyric:</string>
 								<string key="candidateClassName">id</string>
 							</object>
 							<object class="IBActionInfo">
