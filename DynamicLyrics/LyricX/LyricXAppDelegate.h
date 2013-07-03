@@ -26,6 +26,7 @@
 -(IBAction)ExportLRC:(id)sender;
 -(IBAction)OpenAlbumfillerWindow:(id)sender;
 -(IBAction)CopyTotalTextLyrics:(id)sender;
+-(IBAction)EnableAutoConvertLyricsToBig5:(id)sender;
 -(IBAction)WriteLyricsToiTunes:(id)sender;
 -(IBAction)WriteArtwork:(id)sender;
 - (IBAction)adjustLyricsDelay:(id)sender;

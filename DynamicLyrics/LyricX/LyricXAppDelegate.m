@@ -42,8 +42,12 @@
         [userDefaults setBool:YES forKey:@Pref_Enable_MenuBar_Lyrics];
     }
     
+    if ([userDefaults objectForKey:@Pref_Enable_Auto_Convert_Lyrics_to_Big5] == nil)
+    {
+        [userDefaults setBool:NO forKey:@Pref_Enable_Auto_Convert_Lyrics_to_Big5];
+    }
     
-    if ([userDefaults integerForKey:@"Donation"] == 5) {
+    if (false) {//[userDefaults integerForKey:@"Donation"] == 5) {
         [[NSAlert alertWithMessageText:@"Donate us" defaultButton:@"OKay" alternateButton:nil otherButton:nil informativeTextWithFormat:@"DynamicLyrics is a free and open-source software. We are very pleased to see that our software can help you. If you like this App, consider donating to keep development going! \nYou can click the \"Prefrences\" - \"Donate\" tab to get a specific way of making a donation.\n\nThanks for your support."] runModal];
     }
     if ([userDefaults integerForKey:@"Donation"] <= 6) {
@@ -186,7 +190,7 @@
 
 - (IBAction)aboutDynamicLyrics:(id)sender
 {
-    NSURL *url = [NSURL URLWithString:@"http://dynamiclyrics.project.4321.la/"];
+    NSURL *url = [NSURL URLWithString:@"https://github.com/MartianZ/DynamicLyrics"];
     [[NSWorkspace sharedWorkspace] openURL:url];
 }
 

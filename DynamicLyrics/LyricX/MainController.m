@@ -78,13 +78,13 @@
 
 -(void)checkUpdate
 {
-    NSString* result = [RequestSender sendRequest:@"http://api.4321.la/analytics-maclyrics.php?ver=20130517"];
+    /* NSString* result = [RequestSender sendRequest:@"http://api.4321.la/analytics-maclyrics.php?ver=20130517"];
     
     if ([result isEqualToString:@"Update"])
     {
         //NSRunAlertPanel(@"软件发布新版本", @"软件检测到已经您当前的版本已经过期，新版本已经发布，请在软件中运行“检查更新”下载新版本！", @"确定", nil, nil);
         NSRunAlertPanel(NSLocalizedString(@"SoftwareUpdateTitle", nil), NSLocalizedString(@"SoftwareUpdate", nil), @"OK", nil, nil);
-    }
+    } */
 }
 
 
@@ -142,6 +142,10 @@
         
         if (!self.SongLyrics) {
             return;
+        }
+        
+        if ([userDefaults objectForKey:@Pref_Enable_Auto_Convert_Lyrics_to_Big5] != nil && [userDefaults boolForKey:@Pref_Enable_Auto_Convert_Lyrics_to_Big5]) {
+            self.SongLyrics = [_convertManager gbToBig5:self.SongLyrics];
         }
         
         [userDefaults setValue:[NSString stringWithString:self.SongLyrics] forKey:[NSString stringWithFormat:@"%@%@",SongArtist,SongTitle]];

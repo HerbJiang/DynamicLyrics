@@ -159,6 +159,11 @@
 		02BB8A37159CA9E8001334D7 /* Lyrics.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Lyrics.png; sourceTree = "<group>"; };
 		02BB8A3A159CAA9B001334D7 /* Notification.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Notification.png; sourceTree = "<group>"; };
 		02CEF1BC1586FFF200B800A6 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hans"; path = "zh-Hans.lproj/Albumfiller.xib"; sourceTree = "<group>"; };
+		432D3B47178341DC00019128 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/MainMenu.xib"; sourceTree = "<group>"; };
+		432D3B49178341DD00019128 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/Preferences.xib"; sourceTree = "<group>"; };
+		432D3B4A178341DD00019128 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/Albumfiller.xib"; sourceTree = "<group>"; };
+		432D3B4B178341DD00019128 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = "zh-Hant"; path = "zh-Hant.lproj/LyricsSearchWnd.xib"; sourceTree = "<group>"; };
+		432D3B4C178341DD00019128 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		EF68C6CE169BF788006B9128 /* DynamicLyricsHelper.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = DynamicLyricsHelper.xcodeproj; path = ../DynamicLyricsHelper/DynamicLyricsHelper.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -511,6 +516,7 @@
 			children = (
 				02135B521586F99F001480AD /* en */,
 				02135B541586F9A4001480AD /* zh-Hans */,
+				432D3B4B178341DD00019128 /* zh-Hant */,
 			);
 			name = LyricsSearchWnd.xib;
 			sourceTree = "<group>";
@@ -520,6 +526,7 @@
 			children = (
 				02147735159F564500B92431 /* en */,
 				02147745159FF2AA00B92431 /* zh-Hans */,
+				432D3B4C178341DD00019128 /* zh-Hant */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -529,6 +536,7 @@
 			children = (
 				02710EA4152A839F006D4BFF /* en */,
 				02147749159FF44800B92431 /* zh-Hans */,
+				432D3B47178341DC00019128 /* zh-Hant */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
@@ -538,6 +546,7 @@
 			children = (
 				02A561031586F74200E37C6C /* en */,
 				0214774C159FF4F500B92431 /* zh-Hans */,
+				432D3B49178341DD00019128 /* zh-Hant */,
 			);
 			name = Preferences.xib;
 			sourceTree = "<group>";
@@ -547,6 +556,7 @@
 			children = (
 				02A561071586F74F00E37C6C /* en */,
 				02CEF1BC1586FFF200B800A6 /* zh-Hans */,
+				432D3B4A178341DD00019128 /* zh-Hant */,
 			);
 			name = Albumfiller.xib;
 			sourceTree = "<group>";
@@ -608,7 +618,7 @@
 		02710EA9152A839F006D4BFF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: Zhu Zheng (R5RMP6G3GQ)";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -620,7 +630,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = "-licucore";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -628,7 +637,7 @@
 		02710EAA152A839F006D4BFF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Developer ID Application: Zhu Zheng (R5RMP6G3GQ)";
+				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -640,7 +649,6 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.7;
 				OTHER_LDFLAGS = "-licucore";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

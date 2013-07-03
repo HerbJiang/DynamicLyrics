@@ -71,6 +71,13 @@
     KeyValue_SearchLyrics *key_value = [[IB_Array_Controller selectedObjects] objectAtIndex:0];
     NSString *lrc = [QianQianLyrics getLyricsByTitle:[key_value LyricsTitle] getLyricsByArtist:[key_value LyricsArtist] getLyricsByID:[key_value ID]];
     
+    
+    GB_BIG_Converter* _convertManager = [[GB_BIG_Converter alloc] init];
+    if ([[NSUserDefaults standardUserDefaults] objectForKey:@Pref_Enable_Auto_Convert_Lyrics_to_Big5] != nil && [[NSUserDefaults standardUserDefaults] boolForKey:@Pref_Enable_Auto_Convert_Lyrics_to_Big5]) {
+        lrc = [_convertManager gbToBig5:lrc];
+    }
+    [_convertManager release];
+    
     [[NSUserDefaults standardUserDefaults] setValue:[NSString stringWithString:lrc] forKey:[NSString stringWithFormat:@"%@%@",self.SongArtist,self.SongTitle]];
 
     NSDictionary *dict = [NSDictionary dictionaryWithObjectsAndKeys:self.SongTitle,@"SongTitle",self.SongArtist,@"SongArtist", nil];
