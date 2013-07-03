@@ -144,6 +144,10 @@
             return;
         }
         
+        if ([userDefaults objectForKey:@Pref_Enable_Auto_Convert_Lyrics_to_Big5] != nil && [userDefaults boolForKey:@Pref_Enable_Auto_Convert_Lyrics_to_Big5]) {
+            self.SongLyrics = [_convertManager gbToBig5:self.SongLyrics];
+        }
+        
         [userDefaults setValue:[NSString stringWithString:self.SongLyrics] forKey:[NSString stringWithFormat:@"%@%@",SongArtist,SongTitle]];
     
         [self performSelectorOnMainThread:@selector(Anylize) withObject:nil waitUntilDone:YES];
