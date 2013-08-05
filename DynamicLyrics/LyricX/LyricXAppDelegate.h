@@ -23,7 +23,6 @@
 -(IBAction)OpenLyricsSearchWindow:(id)sender;
 -(IBAction)CopyCurrentLyrics:(id)sender;
 -(IBAction)CopyTotalLRC:(id)sender;
--(IBAction)importLyric:(id)sender;
 -(IBAction)exportLRC:(id)sender;
 -(IBAction)OpenAlbumfillerWindow:(id)sender;
 -(IBAction)CopyTotalTextLyrics:(id)sender;
